@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #7297af;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: rgba(53, 64, 99, 0.95);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+}
+header .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+header nav ul li {
+  margin: 0 15px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #eee;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+header nav ul li a:hover {
+  color: #15145e;
+}
+/* ===== LANGUAGE TOGGLE ===== */
+.lang-toggle {
+  display: flex;
+  gap: 6px;
+  margin-left: 20px;
+}
+
+.lang-btn {
+  padding: 6px 12px;
+  border: 1px solid #137586;
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+/* Hover */
+.lang-btn:hover {
+  background-color: #1841af;
+  color: #ffffff;
+}
+
+/* Aktif */
+.lang-btn.active {
+  background-color: #ffffff;
+  color: #000;
+}
+/* ================= HERO ================= */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 120px 20px 50px;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+.hero-text {
+  max-width: 500px;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+}
+.hero-text p {
+  margin: 10px 0 20px;
+  font-size: 1.2rem;
+  color: #f4f4f4;
+}
+.btn {
+  display: inline-block;
+  background: #222;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .3s;
+}
+.btn:hover {
+  background: #444;
+}
+.hero-img img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ================= SECTION UMUM ================= */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+section h2 {
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 40px;
+  position: relative;
+}
+section h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #ffd700;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* ================= SKILLS ================= */
+#skills {
+  background-color: #5e7e99;
+}
+.skill-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
+  justify-items: center;
+}
+.skill-container a {
+  background-color: #141416;
+  border-radius: 12px;
+  padding: 20px 16px;
+  width: 160px;
+  text-align: center;
+  text-decoration: none;
+  color: #eee;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.skill-container a:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.5);
+}
+.skill-container img {
+  width: 70px;
+  margin-bottom: 12px;
+}
+.skill-container p {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ================= PROJECTS ================= */
+#projects {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* 🔥 FIX UTAMA DI SINI */
+.project-card {
+  background-color: #354063;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform .3s, box-shadow .3s;
+
+  display: flex;              /* ⬅️ TAMBAHAN */
+  flex-direction: column;     /* ⬅️ TAMBAHAN */
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.project-card h3 {
+  margin: 8px 0;
+  color: #fff;
+}
+
+.project-card p {
+  min-height: 70px;
+  font-size: 0.95rem;
+  color: #ddd;
+
+  flex-grow: 1;               /* ⬅️ DORONG TOMBOL KE BAWAH */
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+}
+
+/* ================= BTN WEBSITE ================= */
+.btn-website {
+  display: inline-block;
+  margin: 15px auto 0;        /* ⬅️ CENTER HORIZONTAL */
+  padding: 8px 14px;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.btn-website:hover {
+  background-color: #333333;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+/* ================= CERTIFICATES / ACHIEVEMENTS ================= */
+#certificates {
+  background-color: #5e7e99;
+}
+.certificate-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+.certificate-card {
+  background-color: #354063;
+  color: #fff;
+  padding: 15px;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.certificate-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 28px rgba(0,0,0,0.45);
+}
+.certificate-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 2px solid rgba(255,255,255,0.2);
+}
+.certificate-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.certificate-card p {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+.certificate-card a {
+  text-decoration: none;
+  display: block;
+}
+
+/* ================= CONTACT ================= */
+#contact input,
+#contact textarea {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+}
+#contact button {
+  background: #ffd700;
+  color: #000;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: .3s;
+}
+#contact button:hover {
+  background: #333;
+  color: #fff;
+}
+.social {
+  margin-top: 20px;
+}
+.social a {
+  color: #fff;
+  font-size: 1.6rem;
+  margin: 0 12px;
+  transition: .3s;
+}
+.social a:hover {
+  color: #ffd700;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #2c2c2c;
+  color: #eee;
+  font-size: 0.9rem;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+  .certificate-card img {
+    height: 160px;
+  }
+}
