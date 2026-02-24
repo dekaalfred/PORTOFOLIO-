@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const typed = document.getElementById("typed");
   const words = [
-    "Hai, Saya Deka Alfred",
+    "Hai, Saya Deka Alfred Ibnu Kiswanto",
     "Desainer UI/UX & Pengembang Fullstack",
   ];
 

@@ -347,3 +347,85 @@ footer {
     height: 160px;
   }
 }
+/* ================= MOBILE ONLY (AMAN, TANPA UBAH DESKTOP) ================= */
+
+/* HAMBURGER DEFAULT: SEMBUNYI */
+.menu-toggle {
+  display: none;
+}
+
+/* MOBILE MODE */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  header {
+    padding: 12px 20px;
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  nav {
+    width: 100%;
+    display: none;
+    margin-top: 15px;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .lang-toggle {
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  /* HERO */
+  .hero {
+    gap: 30px;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-img img {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* BUTTON MOBILE */
+  .btn,
+  .btn-website {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* SECTION */
+  section {
+    padding: 60px 16px;
+  }
+}
+
+/* DESKTOP DIKUNCI */
+@media (min-width: 769px) {
+  nav {
+    display: flex !important;
+    align-items: center;
+  }
+}
