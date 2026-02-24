@@ -1,6 +1,10 @@
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-menu");
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
 
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+  }
 });
