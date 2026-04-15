@@ -412,7 +412,7 @@ nav ul li a:hover {
   color: #15145e;
 }
 
-/* LANGUAGE */
+/* ===== LANGUAGE TOGGLE ===== */
 .lang-toggle {
   display: flex;
   gap: 6px;
@@ -422,16 +422,24 @@ nav ul li a:hover {
 .lang-btn {
   padding: 6px 12px;
   border: 1px solid #137586;
-  background: transparent;
-  color: #fff;
+  background-color: transparent; /* Default transparan */
+  color: #ffffff;
   font-weight: 600;
-  border-radius: 6px;
   cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-size: 14px;
 }
 
+/* State Aktif: Background putih, tulisan gelap */
 .lang-btn.active {
-  background: #fff;
-  color: #000;
+  background-color: #ffffff !important;
+  color: #000000 !important; /* Sesuaikan dengan warna header agar senada */
+  border-color: #ffffff;
+}
+
+.lang-btn:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* ================= HERO ================= */
